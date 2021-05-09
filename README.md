@@ -1,5 +1,4 @@
-# tkinter-label
-Tkinterのlabelについてのコード
+# tkinter-display-image
+Tkinterの画像表示に関するコード
 
 # 参考記事
-https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
