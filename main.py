@@ -34,6 +34,7 @@ class Application(tk.Frame):
         # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
         # width : 幅の設定
         # height : 高さの設定
+        # Canvas : https://kuroro.blog/python/ANyM9WLpd0LSXRQAELOj/
         canvas = tk.Canvas(height=100, width=100, bg="white")
 
         # Windowを親要素とした場合に、canvas Widgetをどのように配置するのか?
@@ -88,6 +89,7 @@ class Application(tk.Frame):
         # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
         # width : 幅の設定
         # height : 高さの設定
+        # Canvas : https://kuroro.blog/python/ANyM9WLpd0LSXRQAELOj/
         canvas = tk.Canvas(height=100, width=100, bg="white")
 
         # Windowを親要素とした場合に、canvas Widgetをどのように配置するのか?
@@ -116,6 +118,7 @@ class Application(tk.Frame):
         super().__init__(master)
 
         # Windowの画面サイズを設定する。
+        # geometryについて : https://kuroro.blog/python/rozH3S2CYE0a0nB3s2QL/
         self.master.geometry("300x200")
 
         self.drawLabelPngImg()
@@ -130,4 +133,5 @@ if __name__ == "__main__":
     app = Application(master=root)
 
     # Windowをループさせて、継続的にWindow表示させる。
+    # mainloopについて : https://kuroro.blog/python/DmJdUb50oAhmBteRa4fi/
     app.mainloop()
