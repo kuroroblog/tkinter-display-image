@@ -28,11 +28,12 @@ class Application(tk.Frame):
 
     # canvas Widgetにてpng画像を描画する関数
     def drawCanvasPngImg(self):
-        # width : 幅の設定
+        # canvas Widgetを作成する。
         # height : 高さの設定
+        # width : 幅の設定
         # bg : 背景色
-        # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
-        # Canvasについて : https://kuroro.blog/python/ANyM9WLpd0LSXRQAELOj/
+        # 色について : https://kuroro.blog/python/YcZ6Yh4PswqUzaQXwnG2/
+        # Canvasについて : https://kuroro.blog/python/V63iINoXI8iwMeRMEJPK/
         canvas = tk.Canvas(height=100, width=100, bg="white")
 
         # canvas Widgetをどのように配置するのか?
@@ -81,11 +82,12 @@ class Application(tk.Frame):
 
     # canvas Widgetにてjpg画像を描画する関数
     def drawCanvasJpgImg(self):
-        # width : 幅の設定
+        # canvas Widgetを作成する。
         # height : 高さの設定
+        # width : 幅の設定
         # bg : 背景色
-        # 色の設定を変更する場合 : http://www.tcl.tk/man/tcl/TkCmd/colors.htm
-        # Canvasについて : https://kuroro.blog/python/ANyM9WLpd0LSXRQAELOj/
+        # 色について : https://kuroro.blog/python/YcZ6Yh4PswqUzaQXwnG2/
+        # Canvasについて : https://kuroro.blog/python/V63iINoXI8iwMeRMEJPK/
         canvas = tk.Canvas(height=100, width=100, bg="white")
 
         # canvas Widgetをどのように配置するのか?
