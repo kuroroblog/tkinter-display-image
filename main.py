@@ -3,22 +3,23 @@ from PIL import Image, ImageTk
 
 
 class Application(tk.Frame):
-    # label Widgetにてpng画像を描画する関数
+    # label WidgetにてPNG画像を描画する関数
     def drawLabelPngImg(self):
-        # ガベージコレクションが起こり、関数終了後、ローカル変数の場合に画像情報が自動消滅するのを防ぐため、global変数を利用する。
-        # 画像の描画は、main関数内で展開される。 → ローカル変数だとmain関数実行時に画像情報が残っていない。 → グローバル変数を利用して、関数終了後も値参照できるようにしておく。
+        # drawLabelPngImg関数終了後、ガベージコレクションが起こり、画像情報(pngImg変数)が自動消滅するのを防ぐため、global変数を利用する。
+        # 画像の描画は、if __name__ == "__main__":関数内で行われる。 → ローカル変数だとif __name__ == "__main__":関数内では、画像情報(pngImg変数)は残っていない。 → グローバル変数を利用して、drawLabelPngImg関数終了後も、画像情報(pngImg変数)を残るようにする。
         # グローバル変数、ローカル変数とは? : https://itsakura.com/python-local-global#:~:text=%E3%82%B0%E3%83%AD%E3%83%BC%E3%83%90%E3%83%AB%E5%A4%89%E6%95%B0%E3%81%AF%E9%96%A2%E6%95%B0%E3%81%AE,%E5%A4%89%E6%95%B0%E5%90%8D%E3%81%A7%E3%82%82%E5%8F%AF%E3%81%A7%E3%81%99%E3%80%82
         # ガベージコレクションとは? : https://ja.wikipedia.org/wiki/%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3#:~:text=%E3%82%AC%E3%83%99%E3%83%BC%E3%82%B8%E3%82%B3%E3%83%AC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3%EF%BC%88%E8%8B%B1%3A%20garbage%20collection,%E3%83%9E%E3%83%83%E3%82%AB%E3%83%BC%E3%82%B7%E3%83%BC%E3%81%AB%E3%82%88%E3%81%A3%E3%81%A6%E7%99%BA%E6%98%8E%E3%81%95%E3%82%8C%E3%81%9F%E3%80%82
         global pngImg
 
-        # (画像のパスをお好みでご入力ください。)
-        # TkinterのWidgetで画像が扱える形へ変更する。
+        # (PNG画像ファイルパスをお好みでご入力ください。)
+        # PNG画像ファイルパスから画像のインスタンスを生成する。
+        # インスタンスとは? : https://e-words.jp/w/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9.html
         pngImg = tk.PhotoImage(file="/path_to/xxx.png")
 
         # label Widgetを作成する。
         # width : 幅の設定
         # height : 高さの設定
-        # image : 画像の設定を行う。
+        # image : 画像の設定
         # Labelについて : https://kuroro.blog/python/Pj4Z7JBNRvcHZvtFqiKD/
         label = tk.Label(width=100, height=100, image=pngImg)
 
@@ -27,6 +28,7 @@ class Application(tk.Frame):
         label.pack()
 
     # canvas Widgetにてpng画像を描画する関数
+
     def drawCanvasPngImg(self):
         # canvas Widgetを作成する。
         # height : 高さの設定
