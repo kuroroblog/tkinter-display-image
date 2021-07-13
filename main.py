@@ -82,7 +82,7 @@ class Application(tk.Frame):
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         label.pack()
 
-    # canvas Widgetにてjpg画像を描画する関数
+    # canvas WidgetにてJPEG画像を描画する関数
     def drawCanvasJpgImg(self):
         # canvas Widgetを作成する。
         # height : 高さの設定
@@ -96,13 +96,14 @@ class Application(tk.Frame):
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         canvas.pack()
 
-        # Tkinter8.6以降でも、標準Tkinterではjpg対応できないため、PILを利用する。
+        # Tkinter8.6以降でも、標準TkinterではJPEG対応できないため、PILを利用する。
         # 画像に関する公式ドキュメント : https://docs.python.org/ja/3/library/tkinter.html#images
         # openコマンドについて : https://carp.cc.it-hiroshima.ac.jp/~tateyama/Lecture/AppEx/PythonImagePIL.html
-        # (画像のパスをお好みでご入力ください。)
+        # (JPEG画像ファイルパスをお好みでご入力ください。)
         img = Image.open('/path_to/xxx.jpg', 'r')
 
-        # TkinterのWidgetで画像が扱える形へ変更する。
+        # JPEG画像ファイルパスから画像のインスタンスを生成する。
+        # インスタンスとは? : https://e-words.jp/w/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9.html
         # canvas.photo内に画像情報が保存されるため、グローバル変数を宣言しなくてよくなる。
         canvas.photo = ImageTk.PhotoImage(img)
 
