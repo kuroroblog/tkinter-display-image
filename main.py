@@ -27,8 +27,7 @@ class Application(tk.Frame):
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         label.pack()
 
-    # canvas Widgetにてpng画像を描画する関数
-
+    # canvas WidgetにてPNG画像を描画する関数
     def drawCanvasPngImg(self):
         # canvas Widgetを作成する。
         # height : 高さの設定
@@ -42,8 +41,9 @@ class Application(tk.Frame):
         # packについて : https://kuroro.blog/python/UuvLfIBIEaw98BzBZ3FJ/
         canvas.pack()
 
-        # (画像のパスをお好みでご入力ください。)
-        # TkinterのWidgetで画像が扱える形へ変更する。
+        # (PNG画像ファイルパスをお好みでご入力ください。)
+        # PNG画像ファイルパスから画像のインスタンスを生成する。
+        # インスタンスとは? : https://e-words.jp/w/%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E3%83%B3%E3%82%B9.html
         # canvas.photo内に画像情報が保存されるため、グローバル変数を宣言しなくてよくなる。
         canvas.photo = tk.PhotoImage(file="/path_to/xxx.png")
 
